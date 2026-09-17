@@ -63,5 +63,20 @@ async def on_message(message):
                     content="🟢 **Bioma Normal Detectado**",
                     embeds=message.embeds if message.embeds else None
                 )
+import threading
+from flask import Flask
 
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Bot activo 24/7"
+
+def run():
+    app.run(host='0.0.0.0', port=8080)
+
+# Inicia el servidor web en un hilo secundario
+threading.Thread(target=run).start()
+
+# Inicia el bot de Discord
 bot.run(TOKEN)
