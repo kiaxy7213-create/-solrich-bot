@@ -1,7 +1,8 @@
+import os
 import discord
 from discord.ext import commands
 
-TOKEN = 'MTU0OTk0MTcxMTYyMTQ1NTkyMg.GsW3wv.GdK8CLzdeVQQijHixc8WgnarElwvSUIqqZrrqo'
+TOKEN = os.getenv('BOT_TOKEN')
 
 # 1. CANALES DE DESTINO PARA BIOMAS RAROS
 BIOMES_RAROS = {
